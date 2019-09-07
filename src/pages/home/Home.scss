@@ -1,0 +1,67 @@
+
+
+.wrapper{
+  width: 100%;
+  .input-wrapper{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    .input-todo{
+      flex: 4;
+      padding: .5em;
+      box-shadow: none !important;
+      font-size: 24px;
+      &:focus{
+        box-shadow: 0px;
+      }
+    }
+    .btn-submit{
+      flex: 1;
+      height: 100%;
+      padding: .75em;
+      background: #ccc;
+      border: none;
+      cursor: pointer;
+      font-size: 24px;
+      &:hover{
+        background: #aaa;
+      }
+    }
+  }
+  .list-item{
+    list-style: none;
+    display: flex;
+    align-items: center;
+    input{
+      height: 20px;
+      width: 20px;
+      border-radius: none;
+      border-width: 2px;
+    }
+    p.title{
+      margin-left: 1em;
+      font-size: 24px;
+    }
+    .done{
+      text-decoration: line-through;
+    }
+    .btn {
+      width: 40px;
+      height: 40px;
+      background: rgb(193, 0, 0);
+      border-radius: 30px;
+      border: none;
+      font-size: 24px;
+      color: #fff;
+      padding: 2px;
+      margin-left: 1em;
+      cursor: pointer;
+      &:focus{
+        outline: none;
+      }
+      &:hover{
+        background: rgb(255, 90, 90);
+      }
+    }
+  }
+}
