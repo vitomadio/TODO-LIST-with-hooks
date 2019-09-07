@@ -8,7 +8,7 @@ function Home() {
   const inputEl = useRef(null);
 
   useEffect(() => {
-    fetch('http://jsonplaceholder.typicode.com/todos?_limit=5')
+    fetch('https://jsonplaceholder.typicode.com/todos?_limit=5')
       .then(res => res.json())
       .then(response => {
         dispatch({
@@ -33,7 +33,7 @@ function Home() {
         payload: newList
       });
       // Change Todo status to true on server.
-      fetch(`http://jsonplaceholder.typicode.com/todos/${todo.id}`, {
+      fetch(`https://jsonplaceholder.typicode.com/todos/${todo.id}`, {
         method: 'PATCH',
         body: JSON.stringify({
           completed: true
@@ -56,7 +56,7 @@ function Home() {
         payload: newList
       });
       // Change Todo status to false on server.
-      fetch(`http://jsonplaceholder.typicode.com/todos/${todo.id}`, {
+      fetch(`https://jsonplaceholder.typicode.com/todos/${todo.id}`, {
         method: 'PATCH',
         body: JSON.stringify({
           completed: false
@@ -82,7 +82,7 @@ function Home() {
         }
       });
       // Add the new todo to the server.
-      fetch(`http://jsonplaceholder.typicode.com/todos`, {
+      fetch(`https://jsonplaceholder.typicode.com/todos`, {
         method: 'POST',
         body: JSON.stringify({
           id: Date.now(),
@@ -109,7 +109,7 @@ function Home() {
           payload: todo.id
         });
 
-        fetch(`http://jsonplaceholder.typicode.com/todos/${todo.id}`, {
+        fetch(`https://jsonplaceholder.typicode.com/todos/${todo.id}`, {
           method: 'DELETE',
         });
       }

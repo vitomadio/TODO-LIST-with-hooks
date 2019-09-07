@@ -3,12 +3,16 @@
   "version": "1.0.0",
   "description": "Simplest React Hooks Boilerplate",
   "main": "index.js",
+  "homepage": "https://vitomadio.github.io/TODO-LIST-with-hooks",
   "scripts": {
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d dist",
     "start": "cross-env NODE_ENV=development webpack-dev-server --hot",
     "build": "cross-env NODE_ENV=production webpack",
     "lint": "eslint ./src"
   },
   "dependencies": {
+    "gh-pages": "^2.1.1",
     "react": "^16.8.1",
     "react-dom": "^16.8.1",
     "react-hot-loader": "^4.6.5",
